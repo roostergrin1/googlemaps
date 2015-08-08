@@ -1,0 +1,71 @@
+body {
+	  font-size: 20px;
+	  font-family: Roboto;
+}
+
+#gmaps-container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+input, button, select {
+	display: block;
+	padding: 10px;
+	margin: 10px;
+}
+
+.gmaps {
+	width:100%;
+	height:100%;
+}
+
+/* SPINNER */
+
+.spinner-1 {
+	height: 100px;
+	width: 100px;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	display: none;
+	z-index: 10;
+}
+
+.spinner-1 .spinner {
+	width: 100px;
+	height: 100px;
+	background-color: #28aadc;
+	border-radius: 100%;
+}
+.spinner-1 .spinner:before {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 10px;
+	margin: 0 auto;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	content: "";
+	border-radius: 20px;
+	transform-origin: 10px 40px;
+	animation: spinner-1 1s infinite linear;
+}
+
+@keyframes spinner-1 {
+	from {transform: rotate(0deg);}	
+	to {transform: rotate(360deg);}
+}
+
+.show {
+	display: block;
+}
+

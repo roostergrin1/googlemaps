@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Google Maps Demo</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	
+	<div id="gmaps-container">
+		<div class="spinner-1" id="spinner-1">
+			<div class="spinner"></div>
+		</div>
+		<div id="gmaps1" class="gmaps"></div>
+	</div>
+	
+	<p id="map-status"></p>
+	<select id="mode1" onchange="directions('office1')" class="cs-select cs-skin-elastic">
+		<option  value="DRIVING">&#8625; Office1</option>
+		<option value="DRIVING">Driving</option>
+		<option value="WALKING">Walking</option>
+		<option value="BICYCLING">Bicycling</option>
+		<option value="TRANSIT">Transit</option>
+	</select>
+
+	<select id="mode2" onchange="directions('office2')" class="cs-select cs-skin-elastic">
+		<option  value="DRIVING">&#8625; Office2</option>
+		<option value="DRIVING">Driving</option>
+		<option value="WALKING">Walking</option>
+		<option value="BICYCLING">Bicycling</option>
+		<option value="TRANSIT">Transit</option>
+	</select>
+
+	<input id="autocomplete" placeholder="Or enter location and..." type="text"/>
+
+	<button id="go-button-1" class="go-button">Go to Office 1</button>
+<button id="go-button-2" class="go-button">Go to Office 2</button>
+	
+	<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3.exp&#038;signed_in=true&#038;libraries=places&#038;ver=4.2.4'></script>
+	<script type='text/javascript' src="googlemaps.js"></script>
+	
+
+</body>
+</html>
